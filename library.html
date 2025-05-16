@@ -65,21 +65,11 @@
     <main class="flex-grow-1 pt-4">
       <div class="container my-5">
         <h2>Добавить фильм в библиотеку</h2>
-        <form id="movieForm" enctype="multipart/form-data">
-            <div class="mb-3">
-              <label for="movieTitle" class="form-label">Название фильма</label>
-              <input type="text" class="form-control" id="movieTitle" required>
-            </div>
-            <div class="mb-3">
-              <label for="movieDescription" class="form-label">Описание фильма</label>
-              <textarea class="form-control" id="movieDescription" rows="3" required></textarea>
-            </div>
-            <div class="mb-3">
-              <label for="movieImage" class="form-label">Постер фильма</label>
-              <input type="file" class="form-control" id="movieImage" accept="image/*" required>
-            </div>
-            <button type="submit" class="btn btn-primary">Добавить</button>
-          </form>
+        <div class="my-4">
+          <a href="form.html" class="btn btn-success">
+            <i class="bi bi-plus-circle"></i> Добавить новый фильм
+          </a>
+        </div>
         
         
         <div id="movieList" class="row g-4 my-5">
@@ -117,6 +107,9 @@
       integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
       crossorigin="anonymous"
     ></script>
-    <script src="src/library.js"></script>
+    <script type="module">
+      import { MovieController } from "./src/controller.js";
+      MovieController.init();
+    </script>
   </body>
 </html>

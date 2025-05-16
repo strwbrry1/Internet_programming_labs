@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   const movieForm = document.getElementById("movieForm");
   const movieList = document.getElementById("movieList");
-
   movieForm.addEventListener("submit", function (e) {
     e.preventDefault();
 
