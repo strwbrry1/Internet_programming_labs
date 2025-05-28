@@ -1,7 +1,7 @@
 export default function AboutPage() {
   return (
     <>
-    <main className="container my-5">
+    <main className="container mb-5">
       <h2>Лучший кинотеатр на просторах интернета</h2>
       <p>Контакты:</p>
       <ul>

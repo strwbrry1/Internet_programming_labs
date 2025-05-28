@@ -1,4 +1,4 @@
-const BASE = "/apidirectors";
+const BASE = "/api/directors";
 export const fetchDirectors = () => fetch(`${BASE}`).then((r) => r.json());
 export const fetchDirector = (id) =>
   fetch(`${BASE}/${id}`).then((r) => r.json());

@@ -2,11 +2,13 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/navbar.jsx';
 import HomePage from './pages/HomePage.jsx';
 import LibraryPage from './pages/LibraryPage.jsx';
-import FormPage    from './pages/FormPage.jsx';
 import MoviesPage from './pages/MoviesPage.jsx';
 import SeriesPage from './pages/SeriesPage.jsx';
 import AboutPage from './pages/AboutPage.jsx';
 import Footer from './components/footer.jsx';
+
+import GenrePage from './pages/GenrePage.jsx';
+import DirectorPage from './pages/DirectorPage.jsx';
 
 export default function App() {
   return (
@@ -18,8 +20,11 @@ export default function App() {
         <Route path="/movies" element={<MoviesPage/>}/>
         <Route path="/series" element={<SeriesPage/>}/>
         <Route path="/about" element={<AboutPage/>}/>
-        <Route path="/form"    element={<FormPage/>}/>
-        <Route path="/form/:id" element={<FormPage/>}/>
+        <Route path="/genres/:id" element={<GenrePage />} />
+        <Route path="/directors/:id" element={<DirectorPage />} />
+
+        {/* <Route path="/form"    element={<FormPage/>}/>
+        <Route path="/form/:id" element={<FormPage/>}/> */}
       </Routes>
       <Footer/>
     </BrowserRouter>
